@@ -84,7 +84,7 @@ Advanced Chatbot/
 
 ```
 # Clone the repository
-git clone <repo-url>
+git clone https://github.com/Abhi4516/MedAssist-Advanced_Medical_Chatbot.git
 
 # Install required packages
 pip install -r requirements.txt
