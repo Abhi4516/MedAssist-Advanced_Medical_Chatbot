@@ -1,0 +1,32 @@
+
+dataset:
+  path: "data/training_dataset.json"
+
+model:
+  name: "google/flan-t5-small"
+  tokenizer_name: "google/flan-t5-small"
+
+training:
+  output_dir: "fine_tuned_model"
+  epochs: 3              
+  batch_size: 3         
+  learning_rate: 3e-5
+  max_length: 256        
+  logging_steps: 50
+  freeze_encoder_layers: 4
+  freeze_decoder_layers: 4
+  logging_dir: "logs"
+  use_peft: false           
+#  lora_r: 8                
+#  lora_alpha: 32           
+#  lora_dropout: 0.1        
+#  target_modules: ["q", "v"]  
+
+logging:
+  log_file: "logs/training_log"
+
+
+
+
+      
+

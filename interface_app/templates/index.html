@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MedAssist</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="main-container">
+    <div class="chat-container">
+      <h1 class="header-title">MedAssist</h1>
+      <form id="chatForm">
+        <label for="instruction">Instruction (optional):</label><br>
+        <input type="text" id="instruction" name="instruction" placeholder="Enter instruction or leave blank for default"><br>
+        <label for="input">Input:</label><br>
+        <textarea id="input" name="input" placeholder="Enter your query" required></textarea><br>
+        <button type="submit">Send</button>
+      </form>
+      <div id="responseArea"></div>
+    </div>
+
+    <div class="history-container">
+      <div class="history-header">
+        <h2>Session History</h2>
+        <div class="history-controls">
+          <button id="toggleHistory">Fold</button>
+          <button id="clearHistory">Delete</button>
+        </div>
+      </div>
+      <div id="historySidebar"></div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("toggleHistory").addEventListener("click", function() {
+      const historyDiv = document.getElementById("historySidebar");
+      if (historyDiv.style.display === "none") {
+        historyDiv.style.display = "block";
+        this.textContent = "Fold";
+      } else {
+        historyDiv.style.display = "none";
+        this.textContent = "Expand";
+      }
+    });
+
+    document.getElementById("clearHistory").addEventListener("click", function() {
+      fetch("/clear_history", { method: "POST" })
+        .then(r => r.json())
+        .then(() => updateHistory())
+        .catch(e => console.error("Error clearing history:", e));
+    });
+
+    function updateHistory() {
+      fetch("/history")
+        .then(r => r.json())
+        .then(data => {
+          const historyDiv = document.getElementById("historySidebar");
+          historyDiv.innerHTML = "";
+          if (data.history && data.history.length > 0) {
+            data.history.forEach(h => {
+              const entry = document.createElement("div");
+              entry.className = "chat-entry";
+              entry.innerHTML = `<strong>Instruction:</strong> ${h.instruction}<br>
+                                 <strong>Input:</strong> ${h.input}<br>
+                                 <strong>Response:</strong> ${h.response}`;
+              historyDiv.appendChild(entry);
+            });
+          } else {
+            historyDiv.innerHTML = "<p>No messages yet.</p>";
+          }
+        })
+        .catch(e => console.error("Error fetching history:", e));
+    }
+
+    document.getElementById("chatForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const instruction = document.getElementById("instruction").value;
+      const inputText = document.getElementById("input").value;
+      fetch("/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ instruction, input: inputText })
+      })
+      .then(r => r.json())
+      .then(data => {
+        document.getElementById("responseArea").innerHTML = `<p>${data.response}</p>`;
+        updateHistory();
+      })
+      .catch(err => {
+        document.getElementById("responseArea").innerHTML = `<p>Error: ${err}</p>`;
+      });
+    });
+
+    window.onload = updateHistory;
+  </script>
+</body>
+</html>

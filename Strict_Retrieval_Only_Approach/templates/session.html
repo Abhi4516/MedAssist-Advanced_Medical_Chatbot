@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Session Selection - MedAssist</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="session-container">
+    <h1>Session Selection</h1>
+    <p>Select an existing session or create a new one:</p>
+    <form action="/set_session" method="post">
+      <label for="session_id">Existing Sessions:</label><br>
+      <select name="session_id" id="session_id">
+        {% for s in sessions %}
+          <option value="{{ s[0] }}">{{ s[0] }} - Created: {{ s[1] }}</option>
+        {% endfor %}
+      </select>
+      <button type="submit">Continue with Selected Session</button>
+    </form>
+    <form action="/new_session" method="post" style="margin-top:20px;">
+      <button type="submit">Create New Session</button>
+    </form>
+  </div>
+</body>
+</html>
+

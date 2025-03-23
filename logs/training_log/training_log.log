@@ -1,0 +1,7 @@
+2025-03-12 09:36:03,632 - training_log_logger - INFO - Lower layers frozen. Only top layers are trainable.
+2025-03-12 09:36:43,765 - training_log_logger - INFO - Starting training...
+2025-03-12 13:04:29,432 - training_log_logger - INFO - Epoch 1.0 ended with metrics: {'loss': 3.2483, 'grad_norm': 2.92809796333313, 'learning_rate': 2.0063742032245972e-05, 'epoch': 0.9936257967754031, 'step': 5300}
+2025-03-12 20:10:22,069 - training_log_logger - INFO - Epoch 2.0 ended with metrics: {'loss': 3.195, 'grad_norm': 1.8606796264648438, 'learning_rate': 1.0033745781777278e-05, 'epoch': 1.996625421822272, 'step': 10650}
+2025-03-12 23:47:06,487 - training_log_logger - INFO - Epoch 3.0 ended with metrics: {'loss': 3.2732, 'grad_norm': 2.697326898574829, 'learning_rate': 3.749531308586427e-09, 'epoch': 2.9996250468691414, 'step': 16000}
+2025-03-12 23:56:17,188 - training_log_logger - INFO - Training complete.
+2025-03-13 00:05:29,023 - training_log_logger - INFO - Evaluation Metrics: {'eval_loss': 2.9797251224517822, 'eval_runtime': 551.8295, 'eval_samples_per_second': 3.624, 'eval_steps_per_second': 1.209, 'epoch': 3.0}

@@ -1,0 +1,11 @@
+
+venv
+session_history.db
+chat_history.db
+data/training_dataset.json
+faiss_index/index.faiss
+faiss_index/index.pkl
+faiss_index_with_instruction
+fine_tuned_model
+
+

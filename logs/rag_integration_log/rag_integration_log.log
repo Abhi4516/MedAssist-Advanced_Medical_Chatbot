@@ -1,0 +1,22 @@
+2025-03-17 19:37:12,330 - rag_integration_log_logger - INFO - Initializing RAGPipelineManager with model=fine_tuned_model, index=faiss_index
+2025-03-17 19:37:13,456 - rag_integration_log_logger - INFO - HuggingFace pipeline for text2text-generation initialized (stateless).
+2025-03-17 19:37:37,797 - rag_integration_log_logger - INFO - FAISS index loaded successfully.
+2025-03-17 19:37:37,799 - rag_integration_log_logger - INFO - RetrievalQA chain ready (single-input, stateless).
+2025-03-17 19:37:58,350 - rag_integration_log_logger - INFO - Initializing RAGPipelineManager with model=fine_tuned_model, index=faiss_index
+2025-03-17 19:37:59,357 - rag_integration_log_logger - INFO - HuggingFace pipeline for text2text-generation initialized (stateless).
+2025-03-17 19:38:17,389 - rag_integration_log_logger - INFO - FAISS index loaded successfully.
+2025-03-17 19:38:17,391 - rag_integration_log_logger - INFO - RetrievalQA chain ready (single-input, stateless).
+2025-03-17 19:45:09,765 - rag_integration_log_logger - INFO - Initializing RAGPipelineManager with model=fine_tuned_model, index=faiss_index
+2025-03-17 19:45:10,684 - rag_integration_log_logger - INFO - HuggingFace pipeline for text2text-generation initialized (stateless).
+2025-03-17 19:45:31,536 - rag_integration_log_logger - INFO - FAISS index loaded successfully.
+2025-03-17 19:45:31,539 - rag_integration_log_logger - INFO - RetrievalQA chain ready (single-input, stateless).
+2025-03-17 19:45:54,522 - rag_integration_log_logger - INFO - Initializing RAGPipelineManager with model=fine_tuned_model, index=faiss_index
+2025-03-17 19:45:55,555 - rag_integration_log_logger - INFO - HuggingFace pipeline for text2text-generation initialized (stateless).
+2025-03-17 19:46:15,961 - rag_integration_log_logger - INFO - FAISS index loaded successfully.
+2025-03-17 19:46:15,964 - rag_integration_log_logger - INFO - RetrievalQA chain ready (single-input, stateless).
+2025-03-17 19:53:53,657 - rag_integration_log_logger - INFO - Initializing RAGPipelineManager with model=fine_tuned_model, index=faiss_index
+2025-03-17 19:53:54,779 - rag_integration_log_logger - INFO - HuggingFace pipeline for text2text-generation initialized (stateless).
+2025-03-17 19:54:14,871 - rag_integration_log_logger - INFO - FAISS index loaded successfully.
+2025-03-17 19:54:14,872 - rag_integration_log_logger - INFO - RetrievalQA chain ready (single-input, stateless).
+2025-03-17 19:54:15,007 - rag_integration_log_logger - INFO - Asking question with combined_text length: 204
+2025-03-17 19:54:21,911 - rag_integration_log_logger - INFO - RAG answer: Hi, I have gone through your question and understood your concern. It seems that you are not getting any specific symptoms of cough. In fact, you are getting a lot of respiratory infections. If the cough persists for years, it may be due to some illness. You should consult a doctor for a further examination. Hope I have answered your query. Let me know if I can assist you further. Regards Chat Doctor

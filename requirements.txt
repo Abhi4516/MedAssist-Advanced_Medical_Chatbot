@@ -1,0 +1,17 @@
+flask
+pyyaml
+transformers
+datasets
+torch
+scikit-learn
+optuna
+langchain
+peft
+langchain_community
+faiss-cpu
+accelerate
+sentence-transformers
+evaluate
+rouge_score 
+nltk 
+absl-py

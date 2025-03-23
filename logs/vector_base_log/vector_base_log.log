@@ -1,0 +1,21 @@
+2025-03-12 01:41:42,414 - vector_base_log_logger - INFO - Reading dataset from training_dataset.json...
+2025-03-12 01:42:10,559 - vector_base_log_logger - ERROR - Failed to read dataset: Expected object or value
+2025-03-12 01:42:23,659 - vector_base_log_logger - INFO - Reading dataset from training_dataset.json...
+2025-03-12 01:42:39,407 - vector_base_log_logger - INFO - Total dataset size: 789797
+2025-03-12 01:42:39,477 - vector_base_log_logger - INFO - Using 100 rows from the dataset to build FAISS index.
+2025-03-12 01:45:20,886 - vector_base_log_logger - INFO - Reading dataset from training_dataset.json...
+2025-03-12 01:45:37,997 - vector_base_log_logger - ERROR - Failed to read dataset: Expected object or value
+2025-03-12 01:46:16,197 - vector_base_log_logger - INFO - Reading dataset from training_dataset.json...
+2025-03-12 01:46:30,255 - vector_base_log_logger - INFO - Total dataset size: 789797
+2025-03-12 01:46:30,311 - vector_base_log_logger - INFO - Using 100 rows from the dataset to build FAISS index.
+2025-03-12 01:46:30,331 - vector_base_log_logger - INFO - Successfully created text representations (only 'input' and 'output').
+2025-03-12 01:46:59,645 - vector_base_log_logger - INFO - Embeddings created using 'sentence-transformers/all-MiniLM-L6-v2'.
+2025-03-12 01:47:03,659 - vector_base_log_logger - INFO - FAISS vector store built successfully.
+2025-03-12 01:47:03,667 - vector_base_log_logger - INFO - FAISS index saved to 'faiss_index2'.
+2025-03-13 10:33:34,434 - vector_base_log_logger - INFO - Reading dataset from training_dataset.json...
+2025-03-13 10:33:50,339 - vector_base_log_logger - INFO - Total dataset size: 789797
+2025-03-13 10:33:50,868 - vector_base_log_logger - INFO - Using 700000 rows from the dataset to build FAISS index.
+2025-03-13 10:35:24,515 - vector_base_log_logger - INFO - Successfully created text representations (only 'input' and 'output').
+2025-03-13 10:36:28,176 - vector_base_log_logger - INFO - Embeddings created using 'sentence-transformers/all-MiniLM-L6-v2'.
+2025-03-13 16:27:22,975 - vector_base_log_logger - INFO - FAISS vector store built successfully.
+2025-03-13 16:27:35,857 - vector_base_log_logger - INFO - FAISS index saved to 'faiss_index2'.
